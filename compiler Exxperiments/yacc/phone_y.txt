@@ -1,0 +1,22 @@
+%{
+/* Definition section */
+#include<stdio.h>
+#include<stdlib.h>
+%}
+%token A B NL
+/* Rule Section */
+%%
+stmt: A B NL { printf("valid phone number\n");
+exit(0); }
+;
+%%
+int yyerror()
+{
+printf("invalid phone number\n");
+exit(0);
+}
+main()
+{
+printf("enter the phone number: \n");
+yyparse();
+}

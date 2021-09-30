@@ -1,0 +1,24 @@
+%{
+#include<stdio.h>
+#include<stdlib.h>
+#include "y.tab.h"
+void yyerror();
+%}
+%token A B
+%%
+24
+stmt : S
+|
+;
+S : A S B
+|
+;
+%%
+void main()
+{ printf("Enter the sting:"); yyparse();
+printf("Accepted\n");
+exit(0);
+}
+void yyerror(char *S)
+{ printf("Not accepted\n"); exit(0);
+}

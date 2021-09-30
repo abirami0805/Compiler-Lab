@@ -1,0 +1,12 @@
+%{
+%}
+%%
+^([9][1])*[6-9][0-9]{9}$ {printf("valid number\n");}
+.+ {printf("invalid number\n");}
+%%
+int main()
+{
+printf("Enter the mobile number:");
+yylex();
+return 0;
+}

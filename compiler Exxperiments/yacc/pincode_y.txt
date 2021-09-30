@@ -1,0 +1,21 @@
+%{
+/* Definition section */
+#include<stdio.h>
+#include<stdlib.h>
+%}
+%token A B C NL
+%%
+stmt: A B C NL { printf("It is a Tamilnadu pincode\n");
+exit(0); }
+;
+%%
+int yyerror()
+{
+printf("Invalid pincode\n");
+exit(0);
+}
+main()
+{
+printf("enter the pincode: \n");
+yyparse();
+}

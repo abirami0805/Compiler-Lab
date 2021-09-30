@@ -1,0 +1,9 @@
+%{
+#include "y.tab.h"
+%}
+%%
+[a-z]* {return C;}
+@ {return B;}
+[a-z0-9]* {return A;}
+\. {return D;}
+%%

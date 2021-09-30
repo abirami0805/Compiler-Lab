@@ -1,0 +1,21 @@
+%{
+/* Definition section */
+#include<stdio.h>
+#include<stdlib.h>
+%}
+%token D B M Y NL
+%%
+stmt: D B M B Y NL { printf("Valid date format\n");
+exit(0); }
+;
+%%
+int yyerror()
+{
+printf("Invalid date format\n");
+exit(0);
+}
+main()
+{
+printf("enter the date: \n");
+yyparse();
+}

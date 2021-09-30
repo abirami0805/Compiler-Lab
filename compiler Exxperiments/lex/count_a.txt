@@ -1,0 +1,18 @@
+%{
+        int count=0;
+%}
+%%
+^a {count++;}
+[ \t\n](a|A)([a-zA-Z]|[0-9])* {count++;}
+. ;
+%%
+int main()
+{  yylex();
+    printf("count= %d\n",count);
+    return 0; }
+
+sample.txt
+
+Firstly lexical analyzer creates a program lex.1 in the Lex language. Then Lex compiler runs the lex.1 program and produces a C program lex.yy.c.
+Finally C compiler runs the lex.yy.c program and produces an object program a.out.
+a.out is lexical analyzer that transforms an input stream into a sequence of tokens.

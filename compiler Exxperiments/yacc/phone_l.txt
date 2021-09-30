@@ -1,0 +1,8 @@
+%{
+#include "y.tab.h"
+%}
+%%
+\+91 {return A;}
+[6-9]{1}[0-9]{9} {return B;}
+\n {return NL;}
+%%
