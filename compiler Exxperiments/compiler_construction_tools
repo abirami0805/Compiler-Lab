@@ -1,0 +1,82 @@
+COMPILER:
+A compiler is a translator that converts the high-level language into the machine language. High-level language is written by a developer and machine language can be
+understood by the processor. It is used to show errors to the programmer and the main purpose of compiler is to change the code written in one language without changing the
+meaning of the program.
+
+COMPILER CONSTRUCTION TOOLS:
+Some commonly used compiler-construction tools include
+1. Parser generators.
+2. Scanner generators.
+3. Syntax-directed translation engines.
+4. Automatic code generators.
+5. Data-flow analysis engines.
+6. Compiler-construction toolkits.
+
+PARSER GENERATORS
+It produces syntax analyzers (parsers) from the input that is based on a grammatical
+description of programming language or on a context-free grammar. It is useful as the syntax
+analysis phase is highly complex and consumes more manual and compilation time.
+
+Input: Grammatical description of a programming language
+Output: Syntax analyzers.
+
+TOOL - ANTLR
+It is a powerful parser generator for reading, processing, executing, or translating structured
+text or binary files. It's widely used to build languages, tools, and frameworks. From a
+grammar, ANTLR generates a parser that can build parse trees and also generates a listener
+interface (or visitor) that makes it easy to respond to the recognition of phrases of interest.
+From a grammar, ANTLR generates a parser that can build and walk parse trees.
+SCANNER GENERATORS
+It generates lexical analyzers from the input that consists of regular expression description
+based on tokens of a language. It generates a finite automaton to recognize the regular
+expression.
+Input: Regular expression description of the tokens of a language
+Output: Lexical analyzers.
+TOOL – FLEX
+Flex is a tool for generating scanners: programs which recognized lexical patterns in text. flex
+reads the given input files, or its standard input if no file names are given, for a description of
+a scanner to generate. The description is in the form of pairs of regular expressions and C
+code, called rules. flex generates as output a C source file, `lex.yy.c', which defines a routine
+`yylex()'. This file is compiled and linked with the `-lfl' library to produce an executable.
+When the executable is run, it analyzes its input for occurrences of the regular expressions.
+Whenever it finds one, it executes the corresponding C code.
+SYNTAX DIRECTED TRANSLATION ENGINES
+It generates intermediate code with three address formats from the input that consists of a
+parse tree. These engines have routines to traverse the parse tree and then produces the
+intermediate code. In this, each node of the parse tree is associated with one or more
+translations.
+Input: Parse tree.
+Output: Intermediate code.
+TOOL – TREE META
+The TREE-META (or Tree Meta, TREEMETA) Translator Writing System is a compiler-
+compiler system for context-free languages. Unlike earlier metacompilers it separated the
+semantics processing from the syntax processing. The syntax rules contained tree building
+operations that combined recognized language elements with tree nodes. The tree structure
+representation of the input was then processed by a simple form of unparse rules. The unparse
+rules used node recognition and attribute testing that when matched resulted in the associated
+action being performed. In addition, like tree element could also be tested in an unparse rule
+Unparsing rules include extensive tree-scanning and code-generation constructs.
+AUTOMATIC CODE GENERATORS
+It generates the machine language for a target machine. Each operation of the intermediate
+language is translated using a collection of rules and then is taken as an input by the code
+generator. A template matching process is used. An intermediate language statement is
+replaced by its equivalent machine language statement using templates.
+TOOL – REEGENERATOR
+Reegenerator is a Microsoft Visual Studio integrated code generator that helps advancing
+your projects at maximum possible speed. Productivity, quality and consistency make it the
+best code generation tool in the Microsoft.NET space. Reegenerator uses several generators
+in a single file. The generators are regular C#/VB.NET classes in a regular .NET Class
+Library.
+DATA FLOW ENGINES
+It is used in code optimization. Data flow analysis is a key part of the code optimization that
+gathers the information, that is the values that flow from one part of a program to another.
+TOOL – MACKER
+Macker is a build-time architectural rule checking utility for Java developers. It's meant to
+model the architectural ideals programmers always dream up for their projects, and then
+break -- it helps keep code clean and consistent. You can tailor a rules file to suit a specific
+project's structure, or write some general "good practice" rules for your code. Macker doesn't
+try to shove anybody else's rules down your throat; it's flexible, and writing a rules file is part
+of the development process for each unique project.
+COMPILER CONSTRUCTION TOOLKITS
+It provides an integrated set of routines that aids in building compiler components or in the
+construction of various phases of compiler.
